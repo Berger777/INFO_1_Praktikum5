@@ -15,17 +15,18 @@ int main() {
     printf("Praktikum 5:\n");
     printf("----> 	Bitte Befehl eingeben	 <----\n");
     char command[standardBufferSize];
-    struct vokabel* anfang = NULL;
+    struct vokabel *anfang = malloc(sizeof(struct vokabel));
+    anfang->id = -1;
     readCommand(command);
 
-    while (strcmp(command,"quit") != 0){
-        if(strcmp(command,"read")==0){
-           vokabelnEinlesen(anfang);
-        }else if(strcmp(command,"save")==0){
+    while (strcmp(command, "quit") != 0) {
+        if (strcmp(command, "read") == 0) {
+            vokabelnEinlesen(anfang);
+        } else if (strcmp(command, "save") == 0) {
             vokabelnSpeichern();
-        }else if(strcmp(command,"add")==0){
+        } else if (strcmp(command, "add") == 0) {
             //vokabelnZufuegen();
-        }else if(strcmp(command,"del")==0){
+        } else if (strcmp(command, "del") == 0) {
             //vokabelnLoeschen();
         }else if(strcmp(command,"view")==0){
             vokabelListeAusgeben(anfang);

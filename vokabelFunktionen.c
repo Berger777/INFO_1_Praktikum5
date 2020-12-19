@@ -2,8 +2,11 @@
 #include <stdlib.h>
 #include "main.h"
 
-struct vokabel* neueVokabelStruct(int id, char frage[standardBufferSize], char antwort[standardBufferSize],struct vokabel* prev);
-void vokabelInListeZufuegen(char frage[standardBufferSize], char antwort[standardBufferSize], int id, struct vokabel* anfang);
+struct vokabel *
+neueVokabelStruct(int id, char frage[standardBufferSize], char antwort[standardBufferSize], struct vokabel *prev);
+
+void vokabelInListeZufuegen(char frage[standardBufferSize], char antwort[standardBufferSize], struct vokabel *anfang);
+
 void error(char errorDesc[standardBufferSize]);
 char** vokabelEinlesenDecode(char vokabeln[standardBufferSize]);
 
@@ -26,7 +29,7 @@ void vokabelnEinlesen(struct vokabel *first) {
             char** retVal = vokabelEinlesenDecode(vokabeln[i-1]);
             char* frage = retVal[0];
             char* antwort = retVal[1];
-            vokabelInListeZufuegen(frage,antwort, i-1, first);
+            vokabelInListeZufuegen(frage, antwort, first);
             free(antwort);
             free(frage);
             free(retVal);
@@ -81,21 +84,25 @@ char** vokabelEinlesenDecode(char vokabeln[standardBufferSize]){
  * @param id
  * @param anfang
  */
-void vokabelInListeZufuegen(char frage[standardBufferSize], char antwort[standardBufferSize], int id, struct vokabel* anfang) {
-    //Vokabel in Liste aufnehmen
-    struct vokabel* temp = anfang;
-    if(anfang == NULL){
-        printf("chillig");
-        anfang = neueVokabelStruct(id,frage,antwort,temp);
-    }else{
-        while(temp->next != NULL){
-            printf("%d",temp->id);
+void vokabelInListeZufuegen(char frage[standardBufferSize], char antwort[standardBufferSize], struct vokabel *anfang) {
+    struct vokabel *temp = anfang;
+    if (anfang->id == -1) {
+        printf("Setzte erste Vokabel\n");
+        anfang->id = 0;
+        strcpy(anfang->frage, frage);
+        strcpy(anfang->antwort, antwort);
+        anfang->prev = NULL;
+        anfang->next = NULL;
+    } else {
+        //Gehe bis zur letzten Vokabel
+        int newID = 1; //Startet mit dem ersten Element nach Anfang
+        while (temp->next != NULL) {
             temp = temp->next;
+            newID++;
         }
+        printf("Letzte Vokabel-ID:%d\n", temp->id);
+        temp->next = neueVokabelStruct(newID, frage, antwort, temp);
     }
-    //printf("Letzes Listenelement:%d\n",temp->id);
-    temp->next = neueVokabelStruct(id,frage,antwort,temp);
-    //TODO: Speichert nicht in die Liste???? Debugger fixen
 }
 
 /**
@@ -119,12 +126,11 @@ struct vokabel* neueVokabelStruct(int id, char frage[standardBufferSize], char a
 void vokabelListeAusgeben(struct vokabel* erstesElement){
     struct vokabel* temp = erstesElement;
     printf("Gebe Liste aus\n");
-    while (temp->next != NULL){
+    while (temp->next != NULL) {
         printf("-------------\n");
-        printf("%d\n",temp->id);
-        printf("%s\n",temp->frage);
-        printf("%s\n",temp->antwort);
-        printf("-------------\n");
+        printf("ID:%d\n", temp->id);
+        printf("Frage:%s\n", temp->frage);
+        printf("Antwort:%s\n", temp->antwort);
         temp = temp->next;
     }
 }

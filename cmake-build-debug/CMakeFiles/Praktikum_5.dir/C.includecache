@@ -6,23 +6,15 @@
 
 #IncludeRegexTransform: 
 
-C:/Users/matze/CLionProjects/Praktikum_5/main.c
-stdio.h
--
-stdlib.h
--
-main.h
-C:/Users/matze/CLionProjects/Praktikum_5/main.h
-
-C:/Users/matze/CLionProjects/Praktikum_5/main.h
+/home/matze/Desktop/Einfuehrung in die Informatik/Praktikum5/main.h
 string.h
-C:/Users/matze/CLionProjects/Praktikum_5/string.h
+/home/matze/Desktop/Einfuehrung in die Informatik/Praktikum5/string.h
 
-C:/Users/matze/CLionProjects/Praktikum_5/vokabelFunktionen.c
+/home/matze/Desktop/Einfuehrung in die Informatik/Praktikum5/vokabelFunktionen.c
 stdio.h
 -
 stdlib.h
 -
 main.h
-C:/Users/matze/CLionProjects/Praktikum_5/main.h
+/home/matze/Desktop/Einfuehrung in die Informatik/Praktikum5/main.h
 

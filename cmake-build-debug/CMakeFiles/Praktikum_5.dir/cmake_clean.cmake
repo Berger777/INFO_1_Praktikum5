@@ -1,10 +1,8 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/Praktikum_5.dir/main.c.obj"
-  "CMakeFiles/Praktikum_5.dir/vokabelFunktionen.c.obj"
-  "Praktikum_5.exe"
-  "Praktikum_5.exe.manifest"
+  "CMakeFiles/Praktikum_5.dir/main.c.o"
+  "CMakeFiles/Praktikum_5.dir/vokabelFunktionen.c.o"
+  "Praktikum_5"
   "Praktikum_5.pdb"
-  "libPraktikum_5.dll.a"
 )
 
 # Per-language clean rules from dependency scanning.

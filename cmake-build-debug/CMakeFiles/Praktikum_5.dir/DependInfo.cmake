@@ -4,8 +4,8 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "C:/Users/matze/CLionProjects/Praktikum_5/main.c" "C:/Users/matze/CLionProjects/Praktikum_5/cmake-build-debug/CMakeFiles/Praktikum_5.dir/main.c.obj"
-  "C:/Users/matze/CLionProjects/Praktikum_5/vokabelFunktionen.c" "C:/Users/matze/CLionProjects/Praktikum_5/cmake-build-debug/CMakeFiles/Praktikum_5.dir/vokabelFunktionen.c.obj"
+  "/home/matze/Desktop/Einfuehrung in die Informatik/Praktikum5/main.c" "/home/matze/Desktop/Einfuehrung in die Informatik/Praktikum5/cmake-build-debug/CMakeFiles/Praktikum_5.dir/main.c.o"
+  "/home/matze/Desktop/Einfuehrung in die Informatik/Praktikum5/vokabelFunktionen.c" "/home/matze/Desktop/Einfuehrung in die Informatik/Praktikum5/cmake-build-debug/CMakeFiles/Praktikum_5.dir/vokabelFunktionen.c.o"
   )
 set(CMAKE_C_COMPILER_ID "GNU")
 
