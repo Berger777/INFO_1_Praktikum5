@@ -15,6 +15,8 @@ stdio.h
 -
 stdlib.h
 -
+f2fs_fs.h
+-
 main.h
 /home/matze/Desktop/Einfuehrung in die Informatik/Praktikum5/main.h
 
