@@ -1,0 +1,28 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/matze/CLionProjects/Praktikum_5/main.c
+stdio.h
+-
+stdlib.h
+-
+main.h
+C:/Users/matze/CLionProjects/Praktikum_5/main.h
+
+C:/Users/matze/CLionProjects/Praktikum_5/main.h
+string.h
+C:/Users/matze/CLionProjects/Praktikum_5/string.h
+
+C:/Users/matze/CLionProjects/Praktikum_5/vokabelFunktionen.c
+stdio.h
+-
+stdlib.h
+-
+main.h
+C:/Users/matze/CLionProjects/Praktikum_5/main.h
+
